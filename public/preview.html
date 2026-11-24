@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unsplash Candidates Preview</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #1a1614; color: #f5f1e9; padding: 24px; margin: 0; }
+h1 { font-family: serif; color: #d8c8b5; font-size: 28px; margin-bottom: 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.card { background: #29221e; padding: 12px; border: 1px solid #483325; border-radius: 4px; }
+img { width: 100%; height: 180px; object-fit: cover; border-radius: 2px; }
+h4 { margin: 8px 0 4px; font-size: 11px; font-family: monospace; color: #c5a880; word-break: break-all; }
+p { margin: 0; font-size: 12px; color: #bbb; }
+</style>
+</head>
+<body>
+<h1>Candidate Images for J D R Sofa Lining Work</h1>
+<div class="grid" id="grid"></div>
+<script>
+const photos = [
+  { id: "photo-1555041469-a586c61ea9bc", label: "Green velvet mid-century sofa" },
+  { id: "photo-1493663284031-b7e3aefcae8e", label: "Scandinavian wooden frame sofa with grey fabric" },
+  { id: "photo-1616486338812-3dadae4b4ace", label: "Minimalist beige linen sectional couch" },
+  { id: "photo-1583847268964-b28dc8f51f92", label: "Living room sofa with plush throw pillows & cushions" },
+  { id: "photo-1550581190-9c1c48d21d6c", label: "Classic white living room sofa" },
+  { id: "photo-1618219908412-a29a1bb7b86e", label: "Modern curved architectural lounge sofa" },
+  { id: "photo-1618221195710-dd6b41faaea6", label: "Beige modern aesthetic interior sofa" },
+  { id: "photo-1540574163026-643ea20ade25", label: "Deep tufted chesterfield sofa" },
+  { id: "photo-1484101403633-562f891dc89a", label: "Warm ochre / yellow modern 2-seater sofa" },
+  { id: "photo-1567016432779-094069958ea5", label: "Grey fabric sofa in living room" },
+  { id: "photo-1505693416388-ac5ce068fe85", label: "Worn brown leather lounge chair" },
+  { id: "photo-1586023492125-27b2c045efd7", label: "Caramel tan modern armchair" },
+  { id: "photo-1600210492486-724fe5c67fb0", label: "Luxury living room evening interior" },
+  { id: "photo-1567767292278-a4f21aa2d36e", label: "Brown fabric sofa living room setup" },
+  { id: "photo-1584100936595-c0654b55a2e2", label: "Detailed sofa cushions and fabric arrangement" },
+  { id: "photo-1780504863007-44f229d4d33f", label: "Tailor craftsman working on sewing machine" },
+  { id: "photo-1687422808289-e721259c9eb4", label: "Artisan stitching in workshop" },
+  { id: "photo-1746395592054-dc3aed101f72", label: "Tailoring craftsmanship with sewing machine" },
+  { id: "photo-1739109136649-8ebdddc2a6c9", label: "Precise machine stitching work" },
+  { id: "photo-1761864293821-033e75c1eba3", label: "Brown leather armchair with wood armrests" },
+  { id: "photo-1612590305163-5b3826f9353a", label: "Padded wooden frame armchair upholstery" },
+  { id: "photo-1606744824163-985d376605aa", label: "Grey tailored accent armchair" },
+  { id: "photo-1546872003-917e15185482", label: "Black textured leather macro grain" },
+  { id: "photo-1776344651378-5bbb6d68701c", label: "Textured warm brown leather closeup" },
+  { id: "photo-1597310502125-2eb9d5198a57", label: "Woven textile fabric texture closeup" },
+  { id: "photo-1579869036021-45f670fb652c", label: "Upholstered dining room chairs" },
+  { id: "photo-1573866926487-a1865558a9cf", label: "Vintage brown leather chesterfield sofa" },
+  { id: "photo-1507089947368-19c1da9775ae", label: "Minimalist Scandinavian living room" },
+  { id: "photo-1616046229478-9901c5536a45", label: "Textured neutral sofa interior" },
+  { id: "photo-1584589167171-541ce45f1eea", label: "Green velvet textured fabric closeup" },
+  { id: "photo-1524758631624-e2822e304c36", label: "Rich cognac leather material swatch" },
+  { id: "photo-1579656381226-5fc0f0100c3b", label: "Grey woven chenille fabric texture" },
+  { id: "photo-1506152983158-b4a74a01c721", label: "Performance canvas textile weave" },
+  { id: "photo-1592078615290-033ee584e267", label: "Mid-century modern upholstered armchair" },
+  { id: "photo-1549497538-303791108f95", label: "Modern upholstered dining and lounge chairs" }
+];
+
+const grid = document.getElementById('grid');
+photos.forEach(item => {
+  const div = document.createElement('div');
+  div.className = 'card';
+  div.innerHTML = `
+    <img src="https://images.unsplash.com/${item.id}?auto=format&fit=crop&w=500&q=80" alt="${item.id}" loading="lazy" />
+    <h4>${item.id}</h4>
+    <p>${item.label}</p>
+  `;
+  grid.appendChild(div);
+});
+</script>
+</body>
+</html>
